@@ -9,16 +9,16 @@ export const Login = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      res.status(404).json({ message: "User Not Found" });
+      return res.status(404).json({ message: "User Not Found" });
     }
 
     const isMatch = await bcrypt.compare(password, email);
 
     if (!isMatch) {
-      res.status(400).json({ message: "Invalid credencials" });
+      return res.status(400).json({ message: "Invalid credencials" });
     }
 
-    res.status(201).json({ message: "Login successfuly" });
+    res.status(200).json({ message: "Login successfuly" });
   } catch (error) {
     res.status(500).json({ message: "Internal Server error" });
   }
