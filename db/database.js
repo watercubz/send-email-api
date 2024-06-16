@@ -1,18 +1,17 @@
 import mongoose from "mongoose";
 
-const mongoDbURL =
-  "mongodb+srv://name:password@cluster0.jfgz6v2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongoDbURL = "your mongodb url";
 
 mongoose.connect(mongoDbURL, {
-  //useNewUrlParser: true,
-  //useUnifiedTopology: true,
+  // useNewUrlParser: true,
+  // useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "connection error"));
 db.once("open", () => {
-  console.log("Connect MongoDB Atlas");
+  console.log("Connected to MongoDB Atlas");
 });
 
 export default mongoose;

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentacion API</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px auto;
+        max-width: 800px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        text-align: left;
+      }
+      code {
+        font-family: Consolas, monospace;
+        background-color: #f2f2f2;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Documentacion de la API</h1>
+
+    <h2>Rutas Disponibles</h2>
+
+    <h3>/api/getAllUsers</h3>
+    <p>Esta ruta devuelve todos los usuarios registrados en el sistema.</p>
+    <p><strong>Metodo HTTP:</strong> <code>GET</code></p>
+    <p><strong>Ejemplo de uso:</strong></p>
+    <code>/api/getAllUsers</code>
+
+    <h3>/api/login</h3>
+    <p>Esta ruta permite a un usuario iniciar sesion en el sistema.</p>
+    <p><strong>Metodo HTTP:</strong> <code>POST</code></p>
+    <p>
+      <strong>Parametros:</strong> Se envian en el cuerpo de la solicitud (JSON
+      o form-urlencoded).
+    </p>
+    <p><strong>Ejemplo de uso:</strong></p>
+    <code>/api/login</code>
+
+    <h3>/api/register</h3>
+    <p>Esta ruta registra a un nuevo usuario en el sistema.</p>
+    <p><strong>Metodo HTTP:</strong> <code>POST</code></p>
+    <p>
+      <strong>Parametros:</strong> Se envian en el cuerpo de la solicitud (JSON
+      o form-urlencoded).
+    </p>
+    <p><strong>Ejemplo de uso:</strong></p>
+    <code>/api/register</code>
+
+    <h2>Funcionalidad de Envio de Correo Electronico</h2>
+    <p>
+      Cuando un usuario se registra exitosamente en el sistema, se le enviara un
+      correo electronico de bienvenida.
+    </p>
+    <p>
+      El correo electronico contiene detalles sobre la cuenta y usuario puede
+      incluir un enlace para activar la cuenta o simplemente una confirmacion de
+      registro, estas caracteristicas aun no estan disponibles pero se pueden ir
+      agregando dependiendo de la necesidad.
+    </p>
+    <p>
+      Esta funcionalidad se puede modificar para implementar caracterasticas
+      adicionales como confirmacion de correo electronico, restablecimiento de
+      contraseña, confirmacion de pago, entre otros.
+    </p>
+
+    <h2>Implementacion</h2>
+    <p>
+      La implementacion real de las rutas y la logica para enviar correos
+      electronicos puede variar segun la aplicacion y las herramientas
+      utilizadas.
+    </p>
+    <p>
+      Es importante manejar correctamente los datos de usuario, validar la
+      entrada y asegurar las comunicaciones para proteger la privacidad y la
+      seguridad de los usuarios.
+    </p>
+
+    <p>
+      Para mas detalles tecnicos, puedes manadar mensaje por correo o ver las
+      bibliotecas utilizadas en el desarrollo.
+    </p>
+
+    <p><a href="eurysosagarcia@gmail.com">Correo</a></p>
+  </body>
+</html>

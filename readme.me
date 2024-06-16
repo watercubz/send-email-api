@@ -1,0 +1,59 @@
+
+```markdown
+# Documentaci¢n de la API
+
+Esta documentaci¢n describe las principales funcionalidades y rutas disponibles en la API.
+
+## Rutas Disponibles
+
+### `/api/getAllUsers`
+
+Esta ruta devuelve todos los usuarios registrados en el sistema.
+
+- **M‚todo HTTP:** `GET`
+- **Ejemplo de uso:**
+  ```
+  GET /api/getAllUsers
+  ```
+
+### `/api/login`
+
+Esta ruta permite a un usuario iniciar sesi¢n en el sistema.
+
+- **M‚todo HTTP:** `POST`
+- **Par metros:** Se env¡an en el cuerpo de la solicitud (JSON o form-urlencoded).
+- **Ejemplo de uso:**
+  ```
+  POST /api/login
+  ```
+
+### `/api/register`
+
+Esta ruta registra a un nuevo usuario en el sistema.
+
+- **M‚todo HTTP:** `POST`
+- **Par metros:** Se env¡an en el cuerpo de la solicitud (JSON o form-urlencoded).
+- **Ejemplo de uso:**
+  ```
+  POST /api/register
+  ```
+
+## Funcionalidad de Env¡o de Correo Electr¢nico
+
+Cuando un usuario se registra exitosamente en el sistema, se le enviar  un correo electr¢nico de bienvenida.
+
+El correo electr¢nico contiene detalles sobre la cuenta y usuario puede incluir un enlace para activar la cuenta o simplemente una confirmaci¢n de registro, estas caracter¡sticas a£n no est n disponibles pero se pueden ir agregando dependiendo de la necesidad.
+
+Esta funcionalidad se puede modificar para implementar caracter¡sticas adicionales como confirmaci¢n de correo electr¢nico, restablecimiento de contrase¤a, confirmaci¢n de pago, entre otros.
+
+## Implementaci¢n
+
+La implementaci¢n real de las rutas y la l¢gica para enviar correos electr¢nicos puede variar seg£n la aplicaci¢n y las herramientas utilizadas.
+
+Es importante manejar correctamente los datos de usuario, validar la entrada y asegurar las comunicaciones para proteger la privacidad y la seguridad de los usuarios.
+
+Para m s detalles t‚cnicos, puedes enviar un mensaje por correo o ver las bibliotecas utilizadas en el desarrollo.
+
+Contacto: eurysosagarcia@gmail.com
+```
+

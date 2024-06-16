@@ -1,6 +1,18 @@
-import bcrypt, { hash } from "bcrypt";
+import bcrypt from "bcrypt";
 import User from "../models/model.user.js";
 import sendWelcomeEmail from "../email/send-email.js";
+
+export const getAllusers = async (req, res) => {
+  try {
+    const users = await User.find({});
+    if (!users || users.length === 0) {
+      return res.status(404).json({ message: "MMGVOOOOOOOO" });
+    }
+    res.send(users);
+  } catch (error) {
+    res.status(500).json({ message: "MMGVOOOOOOOO@@@@@@" });
+  }
+};
 
 export const Login = async (req, res) => {
   const { email, password } = req.body;
@@ -12,10 +24,10 @@ export const Login = async (req, res) => {
       return res.status(404).json({ message: "User Not Found" });
     }
 
-    const isMatch = await bcrypt.compare(password, email);
+    const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
-      return res.status(400).json({ message: "Invalid credencials" });
+      return res.status(400).json({ message: "Invalid credentials" });
     }
 
     res.status(200).json({ message: "Login successfuly" });
