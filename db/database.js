@@ -4,8 +4,8 @@ const mongoDbURL =
   "mongodb+srv://name:password@cluster0.jfgz6v2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(mongoDbURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  //useNewUrlParser: true,
+  //useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;

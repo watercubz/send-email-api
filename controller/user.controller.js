@@ -31,7 +31,7 @@ export const Register = async (req, res) => {
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
-      res.status(500).json({ message: "User already exits" });
+      return existingUser.status(400).json({ message: "User already exits" });
     }
 
     //encrypt password
@@ -47,8 +47,8 @@ export const Register = async (req, res) => {
     await newUser.save();
 
     await sendWelcomeEmail({
-      name: newUser.user.name,
-      email: newUser.user.email,
+      name,
+      email,
     });
 
     res
