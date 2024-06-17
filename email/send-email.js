@@ -12,10 +12,10 @@ async function main(user) {
   try {
     sendSmtpEmail.subject = `hello ${user.name}`;
     sendSmtpEmail.to = [{ email: user.email, name: user.name }];
-    sendSmtpEmail.htmlContent = `<html><body><h1>Hola ${user.name}</h1><p>Hola bienvenido/a este test de enviar correos automatizados</p><p>si te gusta esta api dame tuu follow en github</p><a href='https://github.com/watercubz'>Go to Github</a></body></html>`;
+    sendSmtpEmail.htmlContent = `<html><body><h1>Hola ${user.name}</h1><p>Gracias por tu registro, sigue explorando nuesra web 💚</p><p><strong>No olvide seguirme en GitHub</strong>💚</p><a href='https://github.com/wa1tercubz'>Go to mi Github</a></body></html>`;
     sendSmtpEmail.sender = {
-      name: "eury",
-      email: "eurysosagarcia@gmail.com",
+      name: "eury", // aca ira el nombre de quien envia el correo o el de la empresa.
+      email: "eurysosagarcia@gmail.com", // aca ira quien envia el correo por ejemplo Amazon-not-replay@gmail.com <--- o tu dominio si cuentas con uno, esto con el fin que le usario sepa que es automatizado y no responda al email.
     };
 
     const result = await apiInstance.sendTransacEmail(sendSmtpEmail);
