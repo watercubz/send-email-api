@@ -6,11 +6,11 @@ export const getAllusers = async (req, res) => {
   try {
     const users = await User.find({});
     if (!users || users.length === 0) {
-      return res.status(404).json({ message: "MMGVOOOOOOOO" });
+      return res.status(404).json({ message: "users not found" });
     }
     res.send(users);
   } catch (error) {
-    res.status(500).json({ message: "MMGVOOOOOOOO@@@@@@" });
+    res.status(500).json({ message: "Internal error Server" });
   }
 };
 
