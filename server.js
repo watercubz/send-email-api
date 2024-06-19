@@ -12,7 +12,7 @@ const app = express();
 app.use(express.static("static"));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
-//app.use(valideMiddleware());
+app.use(valideMiddleware());
 
 const staticPath = path.join(__dirname, "static");
 app.use(express.static(staticPath));
@@ -27,4 +27,4 @@ const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
   console.log(`server is  running on port http://localhost:${PORT}`);
-}); //;
+});
