@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const mongoDbURL = "your mongodb url";
+const mongoDbURL =
+  "mongodb+srv://yourname:password@cluster0.jfgz6v2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(mongoDbURL, {
   // useNewUrlParser: true,

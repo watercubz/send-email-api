@@ -1,5 +1,3 @@
-
-
 ## Documentación de la API
 
 Esta documentación describe las principales funcionalidades y rutas disponibles en la API.
@@ -7,19 +5,23 @@ Esta documentación describe las principales funcionalidades y rutas disponibles
 ## Rutas Disponibles
 
 ```
-- GET    getAllusers
+- GET    users
 - POST   register
 - POST   login
+- POST   uploadImg
 ```
-### `/api/getAllUsers`
+
+### `/api/users`
 
 Esta ruta devuelve todos los usuarios registrados en el sistema.
 
 - **Método HTTP:** `GET`
 - **Ejemplo de uso:**
+
   ```http
-  GET /api/getAllUsers
-  
+  GET /api/users
+
+  ```
 
 ### `/api/login`
 
@@ -43,6 +45,15 @@ Esta ruta registra a un nuevo usuario en el sistema.
   POST /api/register
   ```
 
+Esta ruta permite la subida de imagen por parte del usuario y la asocia con su ID
+
+- **Método HTTP:** `POST`
+- **Parámetros**: Se envian en el cuerpo de la solicitud(Content-Type: multipart/form-data).
+- **Ejemplo de uso:**
+  ```http
+  POST /api/upload:userId
+  ```
+
 ## Funcionalidad de Envío de Correo Electrónico
 
 Cuando un usuario se registra exitosamente en el sistema, se le enviará un correo electrónico de bienvenida.
@@ -60,5 +71,3 @@ Es crucial manejar adecuadamente los datos de usuario, validar la entrada y aseg
 Para más detalles técnicos, por favor, consulta la documentación del servidor y las bibliotecas utilizadas en el desarrollo.
 
 Contacto: eurysosagarcia@gmail.com
-
-
