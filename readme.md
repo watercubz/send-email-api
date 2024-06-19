@@ -51,7 +51,7 @@ Esta ruta permite la subida de imagen por parte del usuario y la asocia con su I
 - **Parámetros**: Se envian en el cuerpo de la solicitud(Content-Type: multipart/form-data).
 - **Ejemplo de uso:**
   ```http
-  POST /api/upload:userId
+  POST /api/upload/userId
   ```
 
 ## Funcionalidad de Envío de Correo Electrónico
