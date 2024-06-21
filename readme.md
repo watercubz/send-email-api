@@ -62,10 +62,6 @@ Esta ruta permite la subida de imagen por parte del usuario y la asocia con su I
 - **Ejemplo de uso:**
   ```http
   POST /api/upload/userId
-
-
-
-
   ```
 
 ## Funcionalidad de Envío de Correo Electrónico
