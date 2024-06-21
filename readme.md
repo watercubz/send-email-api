@@ -23,7 +23,7 @@ Esta ruta devuelve todos los usuarios registrados en el sistema.
   GET /api/users
 
   ```
-
+### `/api/users/${userId}`
 Esta ruta permite la busqueda de usuarios por ID
 
 - **Método HTTP:** `GET`
