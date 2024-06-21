@@ -6,6 +6,7 @@ Esta documentación describe las principales funcionalidades y rutas disponibles
 
 ```
 - GET    users
+- GET    users/${userId}
 - POST   register
 - POST   login
 - POST   uploadImg
@@ -21,6 +22,14 @@ Esta ruta devuelve todos los usuarios registrados en el sistema.
   ```http
   GET /api/users
 
+  ```
+
+Esta ruta permite la busqueda de usuario por ID del usuario
+
+- **Método HTTP:** `GET`
+- **Ejemplo de uso:**
+  ```http
+  GET /api/users/${userId}
   ```
 
 ### `/api/login`
@@ -50,8 +59,13 @@ Esta ruta permite la subida de imagen por parte del usuario y la asocia con su I
 - **Método HTTP:** `POST`
 - **Parámetros**: Se envian en el cuerpo de la solicitud(Content-Type: multipart/form-data).
 - **Ejemplo de uso:**
+
   ```http
   POST /api/upload/userId
+
+
+
+
   ```
 
 ## Funcionalidad de Envío de Correo Electrónico

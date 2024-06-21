@@ -65,7 +65,7 @@ export const Register = async (req, res) => {
     });
 
     res
-      .status(201)
+      .status(200)
       .send({ message: "User registered successfully and email sent!" });
   } catch (error) {
     res.status(500).json({ message: "Error server" });
@@ -89,8 +89,21 @@ export const uploadImg = async (req, res) => {
     };
     user.image.push(newImage);
     await user.save();
-    res.status(201).json(newImage);
+    res.status(200).json(newImage);
   } catch (error) {
     res.status(500).json({ meessage: "Error uploading image", error });
+  }
+};
+
+export const getUserById = async (req, res) => {
+  const user = req.params.userId;
+  try {
+    const _id = await User.findById(user);
+    if (!_id) {
+      return res.status(404).json({ message: "User ID not found" });
+    }
+    res.status(200).json(_id);
+  } catch (error) {
+    res.status(500).json({ message: "Innterla Server error", error });
   }
 };
