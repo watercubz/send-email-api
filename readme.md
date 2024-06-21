@@ -10,7 +10,7 @@ Esta documentación describe las principales funcionalidades y rutas disponibles
 - POST   register
 - POST   login
 - POST   uploadImg
-- DELETE /users/userId
+- DELETE users/userId
 ```
 
 ### `/api/users`
@@ -77,10 +77,6 @@ Esta ruta permite eliminar a los usuario del sistema por ID
 
   ```http
   DELETE /api/users/userId
-  ```
-
-  ```
-
   ```
 
 ## Funcionalidad de Envío de Correo Electrónico
