@@ -98,11 +98,11 @@ export const uploadImg = async (req, res) => {
 export const getUserById = async (req, res) => {
   const user = req.params.userId;
   try {
-    const _id = await User.findById(user);
-    if (!_id) {
+    const getId = await User.findById(user);
+    if (!getId) {
       return res.status(404).json({ message: "User ID not found" });
     }
-    res.status(200).json(_id);
+    res.status(200).json(getId);
   } catch (error) {
     res.status(500).json({ message: "Innterla Server error", error });
   }
