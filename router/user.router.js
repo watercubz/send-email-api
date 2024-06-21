@@ -4,6 +4,7 @@ import {
   getAllusers,
   uploadImg,
   getUserById,
+  deleteUsers,
 } from "../controller/user.controller.js";
 import { Router } from "express";
 import upload from "../config/multer.js";
@@ -18,5 +19,8 @@ router.get("/users/:userId", getUserById);
 router.post("/login", Login);
 router.post("/register", Register);
 router.post("/upload/:userId", upload.single("image"), uploadImg);
+
+// DELETE method
+router.delete("/users/:userId", deleteUsers);
 
 export default router;
