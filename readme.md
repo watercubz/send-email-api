@@ -10,6 +10,7 @@ Esta documentación describe las principales funcionalidades y rutas disponibles
 - POST   register
 - POST   login
 - POST   uploadImg
+- DELETE /users/userId
 ```
 
 ### `/api/users`
@@ -23,7 +24,9 @@ Esta ruta devuelve todos los usuarios registrados en el sistema.
   GET /api/users
 
   ```
+
 ### `/api/users/${userId}`
+
 Esta ruta permite la busqueda de usuarios por ID
 
 - **Método HTTP:** `GET`
@@ -53,6 +56,7 @@ Esta ruta registra a un nuevo usuario en el sistema.
   ```http
   POST /api/register
   ```
+
 ### `/api/upload/userId`
 
 Esta ruta permite la subida de imagen por parte del usuario y la asocia con su ID
@@ -62,6 +66,21 @@ Esta ruta permite la subida de imagen por parte del usuario y la asocia con su I
 - **Ejemplo de uso:**
   ```http
   POST /api/upload/userId
+  ```
+
+### `/api/users/userId`
+
+Esta ruta permite eliminar a los usuario del sistema por ID
+
+- **Método HTTP:** `DELETE`
+- **Ejemplo de uso:**
+
+  ```http
+  DELETE /api/users/userId
+  ```
+
+  ```
+
   ```
 
 ## Funcionalidad de Envío de Correo Electrónico
