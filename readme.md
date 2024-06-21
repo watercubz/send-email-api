@@ -53,13 +53,13 @@ Esta ruta registra a un nuevo usuario en el sistema.
   ```http
   POST /api/register
   ```
+### `/api/upload/userId`
 
 Esta ruta permite la subida de imagen por parte del usuario y la asocia con su ID
 
 - **Método HTTP:** `POST`
 - **Parámetros**: Se envian en el cuerpo de la solicitud(Content-Type: multipart/form-data).
 - **Ejemplo de uso:**
-
   ```http
   POST /api/upload/userId
 
