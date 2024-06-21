@@ -12,7 +12,7 @@ const app = express();
 app.use(express.static("static"));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
-//app.use(valideMiddleware());
+app.use(valideMiddleware());
 
 const staticPath = path.join(__dirname, "static");
 app.use(express.static(staticPath));
