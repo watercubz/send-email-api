@@ -24,7 +24,7 @@ Esta ruta devuelve todos los usuarios registrados en el sistema.
 
   ```
 
-Esta ruta permite la busqueda de usuario por ID del usuario
+Esta ruta permite la busqueda de usuarios por ID
 
 - **Método HTTP:** `GET`
 - **Ejemplo de uso:**
