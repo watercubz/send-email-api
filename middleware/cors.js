@@ -4,7 +4,6 @@ const ACCEPTED_ORIGINS = [
   "http://localhost:5173",
   "http://localhost:4000",
   "http://localhost:3000",
-  "172.18.149",
 ];
 
 export const valideMiddleware = (accepteorigins = ACCEPTED_ORIGINS) =>

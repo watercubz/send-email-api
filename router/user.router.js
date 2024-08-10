@@ -2,10 +2,10 @@ import {
   Login,
   Register,
   getAllusers,
-  uploadImg,
   getUserById,
   deleteUsers,
 } from "../controller/user.controller.js";
+import { uploadImg } from "../controller/upload_file.controller.js";
 import { Router } from "express";
 import upload from "../config/multer.js";
 

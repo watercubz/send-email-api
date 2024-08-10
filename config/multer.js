@@ -4,7 +4,7 @@ import path from "path";
 // Configuracion de almacenamiento con multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "/mnt/c/Users/eurys/Documents");
+    cb(null, "C:/Users/eurys/Downloads");
   },
   filename: (req, file, cb) => {
     cb(null, Date.now() + path.extname(file.originalname));
